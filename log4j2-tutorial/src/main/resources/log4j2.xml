@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %p %t %C.%M(%L) - %m%n" />
+		</Console>
+		<!-- 支持系统变量，使用tomcat部署web应用时，可以使用catalina.base变量 -->
+		<!-- <File name="myfile" fileName="${sys:catalina.base}/logs/error.log"> -->
+		<File name="myfile" fileName="logs/error.log">
+			<PatternLayout pattern="%d %p %t %C.%M(%L) - %m%n" />
+		</File>
+		<Async name="Async">
+			<AppenderRef ref="myfile" />
+		</Async>
+	</appenders>
+	<loggers>
+		<root level="info">
+			<appender-ref ref="Console" />
+			<appender-ref ref="Async" />
+		</root>
+	</loggers>
+</configuration>
