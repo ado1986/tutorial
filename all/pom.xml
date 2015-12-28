@@ -11,6 +11,7 @@
 
 	<modules>
 		<module>../log4j2-tutorial</module>
+		<module>../rmi-tutorial</module>
 	</modules>
 
 	<properties>
