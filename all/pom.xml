@@ -6,12 +6,13 @@
 	<artifactId>all</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
 	<name>tutorial</name>
 
 	<modules>
 		<module>../log4j2-tutorial</module>
 		<module>../rmi-tutorial</module>
+		<module>../rabbitmq-tutorial</module>
 	</modules>
 
 	<properties>
@@ -146,6 +147,13 @@
 				<artifactId>fastjson</artifactId>
 				<version>1.2.7</version>
 			</dependency>
+			<!-- rabbitmq begin -->
+			<dependency>
+				<groupId>com.rabbitmq</groupId>
+				<artifactId>amqp-client</artifactId>
+				<version>3.6.0</version>
+			</dependency>
+			<!-- rabbitmq end -->
 		</dependencies>
 	</dependencyManagement>
 
