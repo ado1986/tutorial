@@ -13,12 +13,16 @@
 		<module>../log4j2-tutorial</module>
 		<module>../rmi-tutorial</module>
 		<module>../rabbitmq-tutorial</module>
+		<module>../httpclient-tutorial</module>
 	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<springframework.version>3.2.2.RELEASE</springframework.version>
 		<httpclient.version>4.4</httpclient.version>
+		<!-- <jetty.version>9.2.14.v20151106</jetty.version> -->
+		<!-- <jetty.version>8.1.18.v20150929</jetty.version> -->
+		<jetty.version>8.1.0.v20120127</jetty.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -90,7 +94,7 @@
 			<dependency>
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpcore</artifactId>
-				<version>4.4</version>
+				<version>${httpclient.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.zookeeper</groupId>
@@ -154,6 +158,27 @@
 				<version>3.6.0</version>
 			</dependency>
 			<!-- rabbitmq end -->
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-server</artifactId>
+				<version>${jetty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-servlet</artifactId>
+				<version>${jetty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-webapp</artifactId>
+				<version>${jetty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-http</artifactId>
+				<version>${jetty.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
