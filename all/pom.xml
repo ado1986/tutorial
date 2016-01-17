@@ -13,6 +13,7 @@
 		<module>../log4j2-tutorial</module>
 		<module>../rmi-tutorial</module>
 		<module>../rabbitmq-tutorial</module>
+		<module>../jetty-tutorial</module>
 	</modules>
 
 	<properties>
