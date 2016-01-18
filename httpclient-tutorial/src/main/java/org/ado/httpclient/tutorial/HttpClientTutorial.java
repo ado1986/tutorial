@@ -83,7 +83,7 @@ public class HttpClientTutorial {
 	}
 
 	public static void main(String[] args) {
-		// 全局使用同一个HttpClient实例
+		// 全局使用同一个HttpClient实例，使用默认的连接池：每个路由最大连接数为2个，总共连接数为20。
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		try {
 			System.out.println("-----------------doGet() begin--------------");
