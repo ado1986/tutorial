@@ -8,19 +8,23 @@
 	</formats>
 	<fileSets>
 		<fileSet>
-			<directory>${project.basedir}\src\main\resources</directory>
-			<!-- 过滤 -->
+			<!-- 将webapp下的文件打包到config目录下，config目录作为jetty的war目录 -->
+			<directory>src/main/webapp</directory>
+			<outputDirectory>config</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<!-- 将resources下的文件打包到config目录下 -->
+			<directory>src/main/resources</directory>
+			<outputDirectory>/</outputDirectory>
 			<excludes>
-				<exclude>*.xml</exclude>
+				<exclude>assembly.xml</exclude>
 			</excludes>
-			<outputDirectory>\</outputDirectory>
 		</fileSet>
 	</fileSets>
-
 	<dependencySets>
 		<dependencySet>
-			<useProjectArtifact>true</useProjectArtifact>
-			<outputDirectory>lib</outputDirectory><!-- 将scope为runtime的依赖包打包到lib目录下。 -->
+			<!-- 依赖jar包打包到lib目录 -->
+			<outputDirectory>lib</outputDirectory>
 			<scope>runtime</scope>
 		</dependencySet>
 	</dependencySets>

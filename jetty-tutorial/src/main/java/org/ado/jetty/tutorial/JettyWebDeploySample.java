@@ -8,7 +8,9 @@ import org.eclipse.jetty.xml.XmlConfiguration;
 /**
  * 使用Jetty和mave-assembly结合，部署web应用
  * 
- * 不能用于本地调试
+ * 不能用于本地调试，打包导出到目录，用java命令进行执行
+ * 
+ * 执行命令为：java -classpath . -Djava.ext.dirs=./lib org.ado.jetty.tutorial.JettyWebDeploySample
  * 
  * @author ado1986
  *

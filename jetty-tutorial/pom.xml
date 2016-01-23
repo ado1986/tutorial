@@ -7,6 +7,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../all</relativePath>
 	</parent>
+
 	<groupId>org.ado</groupId>
 	<artifactId>jetty-tutorial</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -51,21 +52,27 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<plugin>
-		<artifactId>maven-assembly-plugin</artifactId>
-		<executions>  <!--执行器 mvn assembly:assembly -->
-			<execution>
-				<id>make-zip</id><!--名字任意 -->
-				<phase>package</phase><!-- 绑定到package生命周期阶段上 -->
-				<goals>
-					<goal>single</goal><!-- 只运行一次 -->
-				</goals>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.6</version>
 				<configuration>
-					<descriptors> <!--描述文件路径 -->
+					<descriptors>
 						<descriptor>src/main/resources/assembly.xml</descriptor>
 					</descriptors>
 				</configuration>
-			</execution>
-		</executions>
-	</plugin>
+				<executions>
+					<execution>
+						<!-- package阶段执行命令 -->
+						<phase>package</phase>
+						<goals>
+							<!-- 执行命令：assembly:single -->
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

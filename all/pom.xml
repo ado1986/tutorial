@@ -14,6 +14,7 @@
 		<module>../rmi-tutorial</module>
 		<module>../rabbitmq-tutorial</module>
 		<module>../httpclient-tutorial</module>
+		<module>../jetty-tutorial</module>
 	</modules>
 
 	<properties>
