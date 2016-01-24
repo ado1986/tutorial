@@ -12,6 +12,8 @@ import org.eclipse.jetty.xml.XmlConfiguration;
  * 
  * 执行命令为：java -classpath . -Djava.ext.dirs=./lib org.ado.jetty.tutorial.JettyWebDeploySample
  * 
+ * 测试URL：http://localhost:8080/jetty/helloWorld
+ * 
  * @author ado1986
  *
  * @create_time 2016年1月20日 上午9:57:17
