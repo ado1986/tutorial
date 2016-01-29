@@ -5,10 +5,24 @@
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	<display-name>Hello World</display-name>
 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:spring_config.xml
+		</param-value>
+	</context-param>
+
+	<listener>
+		<description>spring监听器</description>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
 	<servlet>
 		<description>spring mvc servlet</description>
 		<servlet-name>springMvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- 支持异步servlet handler -->
+		<async-supported>true</async-supported>
 		<init-param>
 			<description>spring mvc file</description>
 			<param-name>contextConfigLocation</param-name>
