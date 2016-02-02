@@ -15,6 +15,7 @@
 		<module>../rabbitmq-tutorial</module>
 		<module>../httpclient-tutorial</module>
 		<module>../jetty-tutorial</module>
+		<module>../nio-tutorial</module>
 	</modules>
 
 	<properties>
