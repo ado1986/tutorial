@@ -1,4 +1,4 @@
-package org.ado.nio.tutorial.mainsubreactor;
+package org.ado.nio.tutorial.reactor.mainsub;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
