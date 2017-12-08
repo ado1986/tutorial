@@ -16,6 +16,7 @@
 		<module>../httpclient-tutorial</module>
 		<module>../jetty-tutorial</module>
 		<module>../nio-tutorial</module>
+		<module>../java-tutorial</module>
 	</modules>
 
 	<properties>
